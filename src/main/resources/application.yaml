@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: travel-agent-project
+
+# This is for openai, since openAI is not free, so we are not using it for now.
+#  ai:
+#    openai:
+#      api-key: ${OPENAI_API_KEY}
+#      chat:
+#        model: ${OPENAI_CHAT_MODEL:gpt-4o-mini}
+
+
+# This is for google genai, since google genai is free, so we are using it for now.
+  ai:
+    google:
+      genai:
+        api-key: ${GOOGLE_GENAI_API_KEY}
+        chat:
+          model: ${GOOGLE_GENAI_CHAT_MODEL:gemini-2.5-flash-lite}
