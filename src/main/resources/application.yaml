@@ -17,6 +17,8 @@ spring:
   ai:
     google:
       genai:
+#        From https://aistudio.google.com/api-keys -> create api key and set it in the environment variable GOOGLE_GENAI_API_KEY
         api-key: ${GOOGLE_GENAI_API_KEY}
         chat:
+#          From select the model and set it in the environment variable GOOGLE_GENAI_CHAT_MODEL. Since this model is free, we are using it for now.
           model: ${GOOGLE_GENAI_CHAT_MODEL:gemini-2.5-flash-lite}
